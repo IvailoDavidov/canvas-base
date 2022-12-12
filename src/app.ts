@@ -11,26 +11,48 @@ const DARK = 'rgb(209, 139, 71)';
 
 grid();
 frame();
+smiley();
 
-function smiley(){
-    
+function smiley() {
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.arc(700, 100, 80, 0, 2 * Math.PI)
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.arc(670,70,10,0, 2* Math.PI)
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.arc(730,70,10,0, 2* Math.PI)
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.arc(700,100,60,0, Math.PI)
+    ctx.stroke();
+    ctx.closePath();
+
 }
 
 function frame() {
-    // ctx.fillRect(100,100,600,400)
 
     ctx.beginPath();
     ctx.lineWidth = 50;
     ctx.strokeStyle = DARK;
-    ctx.strokeRect(75,75,450,450);
+    ctx.strokeRect(75, 75, 450, 450);
     ctx.closePath();
-   
- 
+
+
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = 'black';
-    ctx.strokeRect(100,100,400,400)
- 
+    ctx.strokeRect(100, 100, 400, 400)
+
 }
 
 function grid() {
