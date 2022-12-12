@@ -2,13 +2,36 @@
 const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
-
 const WIDHT = canvas.width;
 const HEIGHT = canvas.height;
 
+const LIGHT = 'rgb(255, 206, 158)';
+const DARK = 'rgb(209, 139, 71)';
+
 
 grid();
+frame();
+
+function smiley(){
+    
+}
+
+function frame() {
+    // ctx.fillRect(100,100,600,400)
+
+    ctx.beginPath();
+    ctx.lineWidth = 50;
+    ctx.strokeStyle = DARK;
+    ctx.strokeRect(75,75,450,450);
+    ctx.closePath();
+   
+ 
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'black';
+    ctx.strokeRect(100,100,400,400)
+ 
+}
 
 function grid() {
     for (let y = 20; y < HEIGHT; y += 20) {
